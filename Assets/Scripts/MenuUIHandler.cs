@@ -34,11 +34,11 @@ public class MenuUIHandler : MonoBehaviour
 
     public void Exit()
     {
-#if UNITY_EDITOR
-        EditorApplication.ExitPlaymode();
-#else
-        Applicaiton.Quit();
-#endif
+        #if UNITY_EDITOR
+                EditorApplication.ExitPlaymode();
+        #else
+                Applicaiton.Quit();
+        #endif
     }
 
     public void SaveNewPlayerName()
